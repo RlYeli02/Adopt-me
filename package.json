@@ -2,7 +2,7 @@
   "name": "adopt-me",
   "version": "2.0.0",
   "description": "mejorado",
-  "main": "index.js",
+  "main": "App.js",
   "dependencies": {
     "@frontendmasters/pet": "^1.0.3",
     "react": "^16.13.1",

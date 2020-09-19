@@ -30,5 +30,5 @@ const SearchParams = () => {
     </div>
   );
 };
-// donde esta animals.map se puede poner animal =>() en vez de animal=>{}, lo unico que si se pone corchete debe ir return
+// donde esta animals.map se puede poner animal =>() en vez de animal=>{},, lo unico que si se pone corchete debe ir return
 export default SearchParams;
