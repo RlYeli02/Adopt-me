@@ -12,10 +12,10 @@ const SearchParams = () => {
   return (
     <div className="search-params">
       <form>
-        <label htmlFor="location">
+        <label htmlFor="locationn">
           Location
           <input
-            id="location"
+            id="locationn"
             value={location}
             placeholder="Location"
             onChange={(e) => setLocation(e.target.value)}
