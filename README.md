@@ -1,7 +1,7 @@
 # Adopt-me
 simple page to adopt animals.
 
-# setup project:
+# project setup:
 npm install
 
 # run projetc:
