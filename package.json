@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "mejorado",
   "main": "App.js",
+  "engines": {
+    "node": "15.x"
+  },
   "dependencies": {
     "@babel/cli": "^7.12.1",
     "@emotion/babel-preset-css-prop": "^10.0.27",
