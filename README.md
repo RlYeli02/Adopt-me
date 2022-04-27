@@ -6,3 +6,5 @@ npm install
 
 # run projetc:
 npm run dev
+
+This app was created without create react app.
