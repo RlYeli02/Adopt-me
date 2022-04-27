@@ -33,7 +33,7 @@ const SearchParams = () => {
       const breedStrings = ApiBreeds.map(({ name }) => name);
       setBreeds(breedStrings);
     }, console.error);
-  }, [animal, setBreed, setBreeds]); // this breeds is diferently to the breeds of const breeds
+  }, [animal, setBreed, setBreeds]); 
 
   return (
     <div className="search-params">
@@ -74,5 +74,5 @@ const SearchParams = () => {
     </div>
   );
 };
-// donde esta animals.map se puede poner animal =>() en vez de animal=>{}, lo unico que si se pone corchete debe ir return
+
 export default SearchParams;

@@ -13,7 +13,7 @@ class Details extends React.Component {
     this.state = {
       loading: true,
       showModal: false,
-      toggleModal: () => this.setState({ showModal: !this.state.showModal }), // si es true hazlo false, si es false hazlo true. esto es para hacer lo contrario de lo actualmente es.
+      toggleModal: () => this.setState({ showModal: !this.state.showModal }),
       adopt: () => navigate(this.state.url),
     };
   }
@@ -83,16 +83,14 @@ class Details extends React.Component {
               </div>
             </Modal>
           ) : null}
-          {/* esto es para decirle a react que renderice null, para que no renderice nada */}
+         
         </div>
       </div>
     );
   }
 }
 
-// la funcion normal vs flecha:
-// la funcion normal puede ser diferente cada vez que se invoca la funcion
-// la funcion flecha se mantiene el valor del this del contexto lexico que envuelve la funcion
+
 
 export default function DetailsErrorBoundary(props) {
   return (
