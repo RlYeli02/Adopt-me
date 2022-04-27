@@ -48,7 +48,7 @@
     "dev": "parcel src/index.html",
     "dev:mock": "cross-env PET_MOCK=mock npm run dev",
     "format": "prettier --write \"src/**/*.{js,html}\" --write",
-    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "lint": "eslint \"src/components/**/*.{js,jsx}\" --quiet",
     "test": "jest",
     "start": "npm run build && babel-node server/index.js"
   },
