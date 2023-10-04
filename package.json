@@ -2,7 +2,7 @@
   "name": "adopt-me",
   "version": "1.0.0",
   "description": "mejorado",
-  "main": "App.js",
+ 
   "engines": {
     "node": "15.x"
   },
@@ -17,6 +17,7 @@
     "express": "^4.17.1",
     "heroku": "^7.47.8",
     "node": "^15.x",
+    "parcel": "^2.9.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.2",
@@ -38,6 +39,7 @@
     "eslint-plugin-react-hooks": "^4.1.2",
     "jest": "^26.6.1",
     "prettier": "^2.1.1",
+    "process": "^0.11.10",
     "react-testing-library": "^8.0.1"
   },
   "browserslist": [
@@ -45,7 +47,7 @@
   ],
   "scripts": {
     "build": "parcel build --public-url ./dist/ src/index.html",
-    "dev": "parcel src/index.html",
+    "dev": "parcel serve src/index.html",
     "dev:mock": "cross-env PET_MOCK=mock npm run dev",
     "format": "prettier --write \"src/**/*.{js,html}\" --write",
     "lint": "eslint \"src/components/**/*.{js,jsx}\" --quiet",

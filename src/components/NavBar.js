@@ -10,7 +10,6 @@ const Spin = keyframes`
   }
 `;
 
-
 const NavBar = () => {
     const [padding ] = useState(15)
 

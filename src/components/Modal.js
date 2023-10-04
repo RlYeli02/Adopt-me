@@ -9,7 +9,7 @@ const Modal = ({ children }) => {
   }
   
   useEffect(() => {
-    const modalRoot = document.getElementById("modal"); // crea una variable modal root la cual agarrara el id modal de html
+    const modalRoot = document.getElementById("modal"); 
     modalRoot.appendChild(elRef.current);
     return () => modalRoot.removeChild(elRef.current);
   }, []);
