@@ -2,7 +2,7 @@
   "name": "adopt-me",
   "version": "1.0.0",
   "description": "mejorado",
- 
+  "type": "module",
   "engines": {
     "node": "15.x"
   },
@@ -19,7 +19,7 @@
     "node": "^15.x",
     "parcel": "^2.9.3",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react-dom": "^16.14.0",
     "react-redux": "^7.2.2",
     "redux": "^4.0.5"
   },
@@ -46,13 +46,13 @@
     "last 2 Chrome versions"
   ],
   "scripts": {
-    "build": "parcel build --public-url ./dist/ src/index.html",
+    "build": "parcel build src/index.html",
     "dev": "parcel serve src/index.html",
     "dev:mock": "cross-env PET_MOCK=mock npm run dev",
     "format": "prettier --write \"src/**/*.{js,html}\" --write",
     "lint": "eslint \"src/components/**/*.{js,jsx}\" --quiet",
     "test": "jest",
-    "start": "npm run build && babel-node server/index.js"
+    "start": "npm run build && node server/index.js"
   },
   "keywords": [],
   "author": "Franyeliza Rodriguez Lanfranco",

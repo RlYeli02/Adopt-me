@@ -1,30 +1,17 @@
-import express from "express";
-import React from "react";
-import { renderToString } from "react-dom/server";
-import { ServerLocation } from "@reach/router";
-import fs from "fs";
-import App from "../src/App";
-
-const PORT = process.env.PORT || 3000;
-
-const html = fs.readFileSync("dist/index.html").toString();
-
-const parts = html.split("not rendered");
-
+import express from 'express';
+import path from 'path';
+import {fileURLToPath} from 'url';
 const app = express();
+// serve up production assets
+app.use(express.static('dist'));
 
-app.use("/dist", express.static("dist"));
-app.use((req, res) => {
-  const reactMarkup = (
-    <ServerLocation url={req.url}>
-      <App />
-    </ServerLocation>
-  );
- 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname('/Users/franyelizacodeait/Desktop/yeliBeans/Adopt-me/dist');
 
-  res.send(parts[0] + renderToString(reactMarkup) + parts[1]);
-  res.end();
+app.get('*', (req, res) => {
+res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
 });
-
-console.log(`listening on ${PORT}`);
+// if not in production use the port 5000
+const PORT = process.env.PORT || 3009;
+console.log('server started on port:',PORT);
 app.listen(PORT);
